@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function merge2String(s1, s2) {
+            let mergedString = "";
+            let s1split = s1.split("");
+            let s2split = s2.split("");
+            if (s1split.length >= s2split.length) {
+                for (i = 0; i < s1split.length; i++) {
+                    if (i < s2split.length) {
+                        mergedString += s1split[i];
+                        mergedString += s2split[i];
+                    } else {
+                        mergedString += s1split[i];
+                    }
+                }
+            }
+            if (s1split.length < s2split.length) {
+                for (i = 0; i < s2split.length; i++) {
+                    if (i < s1split.length) {
+                        mergedString += s1split[i];
+                        mergedString += s2split[i];
+                    } else {
+                        mergedString += s2split[i];
+                    }
+                }
+            }
+            return mergedString;
+        }
+        let case1 = merge2String("abc", "123");
+        let case2 = merge2String("abc", "0123");
+        let case3 = merge2String("abcd", "123");
+        console.log("Case 1: ", case1);
+        console.log("Case 2: ", case2);
+        console.log("Case 3: ", case3);
+    </script>
+</body>
+
+</html>

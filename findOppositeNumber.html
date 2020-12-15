@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function findOppositeNumber(n, inputNumber) {
+            if (n < 4 || n > 20 || n % 2 == 1) {
+                return console.log("so khong hop le");
+            }
+            if (inputNumber <= n / 2) {
+                return n / 2 + inputNumber;
+            } else {
+                return inputNumber - n / 2;
+            }
+        }
+        let a = findOppositeNumber(10, 6);
+        let b = findOppositeNumber(10, 2);
+        console.log("case (10, 6):", a);
+        console.log("case (10, 2):", b);
+    </script>
+</body>
+
+</html>

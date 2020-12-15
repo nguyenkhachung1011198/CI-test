@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .gameTitle {
+            width: 400px;
+            height: 100px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Lucky Number</h1>
+        <h3>Dự đoán con số của bạn nằm trong khoảng từ 1 đến 10</h3>
+        <input style="display: inline-block;" id="inputNumber" type="number" placeholder="Nhập số mà bạn dự đoán">
+        <button id="button" style="display: inline-block; width: fit-content; height: fit-content;">QUAY SỐ</button>
+    </div>
+    <script>
+        let inputNumber;
+        let correctNumber = Math.floor(Math.random() * 10 + 1);
+        console.log(correctNumber);
+        let i = 0;
+        $("#button").click(function () {
+            inputNumber = $("#inputNumber").val();
+            i++;
+            if (i >= 3) {
+                return alert("Bạn đã nhập sai 3 lần, kết quả đúng là: " + correctNumber + "\nBấm f5 để chơi lại");
+            }
+            if (inputNumber < 1 || inputNumber > 10) {
+                return alert("Số không hợp lệ");
+            }
+            if (inputNumber == correctNumber) {
+                alert("Bạn đã đoán đúng");
+            } else {
+                alert("Bạn đã đoán sai, hãy nhấn OK và nhập lại");
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>
