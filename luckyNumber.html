@@ -26,7 +26,7 @@
         $("#button").click(function () {
             inputNumber = $("#inputNumber").val();
             i++;
-            if (i >= 3) {
+            if (i > 3) {
                 return alert("Bạn đã nhập sai 3 lần, kết quả đúng là: " + correctNumber + "\nBấm f5 để chơi lại");
             }
             if (inputNumber < 1 || inputNumber > 10) {
