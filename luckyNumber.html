@@ -8,12 +8,6 @@
         body {
             text-align: center;
         }
-
-        .gameTitle {
-            width: 400px;
-            height: 100px;
-
-        }
     </style>
 </head>
 
@@ -36,6 +30,7 @@
                 return alert("Bạn đã nhập sai 3 lần, kết quả đúng là: " + correctNumber + "\nBấm f5 để chơi lại");
             }
             if (inputNumber < 1 || inputNumber > 10) {
+                i--;
                 return alert("Số không hợp lệ");
             }
             if (inputNumber == correctNumber) {
